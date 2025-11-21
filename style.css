@@ -303,3 +303,12 @@ footer p { color: white; margin: 0; }
 }
 /* Hide the top black bar (header) only on About page */
 header { display: none !important; }
+
+/* Completely remove the top black bar (header) on all pages */
+header {
+  display: none !important;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+

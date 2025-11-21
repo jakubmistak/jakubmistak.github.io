@@ -400,32 +400,6 @@ body.research main {
     display: block;
 }
 
-/* Details/summary for abstract toggle */
-
-.pub-abstract-details {
-    margin-top: 0;
-}
-
-/* Hide the default triangle marker */
-.pub-abstract-details summary::-webkit-details-marker,
-.pub-abstract-details summary::marker {
-    display: none;
-}
-
-/* Make the summary look like the other pills */
-.pub-abstract-details summary.pub-label {
-    list-style: none;
-}
-
-/* Show abstract only when details is open */
-.pub-abstract-details .pub-abstract {
-    display: none;
-}
-
-.pub-abstract-details[open] .pub-abstract {
-    display: block;
-}
-
 .section-note {
     font-size: 0.95rem;
     color: var(--text-secondary);

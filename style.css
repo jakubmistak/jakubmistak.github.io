@@ -336,6 +336,8 @@ body.research main {
     font-weight: 500;
 }
 
+/* Buttons/labels under each publication */
+
 .pub-links {
     margin-top: 0.6rem;
     display: flex;
@@ -355,6 +357,8 @@ body.research main {
     color: var(--text-secondary);
     background: var(--bg-primary);
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+    font: inherit;           /* make buttons look like text */
 }
 
 .pub-label i {
@@ -365,6 +369,22 @@ body.research main {
     background: var(--accent-primary);
     color: #ffffff;
     border-color: var(--accent-primary);
+}
+
+/* Abstract box */
+
+.pub-abstract {
+    display: none;
+    margin-top: 0.75rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    text-align: justify;
+}
+
+.pub-abstract.show {
+    display: block;
 }
 
 .section-note {

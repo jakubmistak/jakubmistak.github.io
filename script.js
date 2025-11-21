@@ -1,45 +1,62 @@
-// theme: "light" | "dark" | "auto"
-const THEME_KEY = "site-theme";
+let currentTheme = localStorage.getItem('theme') || 'auto';
 
-function applyTheme(theme) {
-  const body = document.body;
-  body.classList.remove("theme-light", "theme-dark");
-
-  let finalTheme = theme;
-
-  if (theme === "auto") {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    finalTheme = prefersDark ? "dark" : "light";
-  }
-
-  body.classList.add(`theme-${finalTheme}`);
-
-  // Update button states
-  document.querySelectorAll("[data-theme]").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.theme === theme);
-  });
+function toggleDropdown() {
+    const menu = document.getElementById('themeMenu');
+    menu.classList.toggle('show');
 }
 
 function setTheme(theme) {
-  localStorage.setItem(THEME_KEY, theme);
-  applyTheme(theme);
+    currentTheme = theme;
+    localStorage.setItem('theme', theme);
+    
+    if (theme === 'auto') {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    } else {
+        document.documentElement.setAttribute('data-theme', theme);
+    }
+    
+    const icon = document.getElementById('themeIcon');
+    if (theme === 'dark') {
+        icon.textContent = '☽';
+    } else if (theme === 'light') {
+        icon.textContent = '☀';
+    } else {
+        icon.textContent = '⚙';
+    }
+    
+    updateActiveOption();
+    document.getElementById('themeMenu').classList.remove('show');
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const stored = localStorage.getItem(THEME_KEY) || "auto";
-  applyTheme(stored);
-
-  document.querySelectorAll("[data-theme]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      setTheme(btn.dataset.theme);
+function updateActiveOption() {
+    const options = document.querySelectorAll('.theme-option');
+    options.forEach(option => {
+        option.classList.remove('active');
+        if (option.textContent.includes(
+            currentTheme === 'light' ? 'Light' :
+            currentTheme === 'dark' ? 'Dark' : 'Auto'
+        )) {
+            option.classList.add('active');
+        }
     });
-  });
+}
 
-  // React if system theme changes while on "auto"
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
-    const current = localStorage.getItem(THEME_KEY) || "auto";
-    if (current === "auto") {
-      applyTheme("auto");
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if (currentTheme === 'auto') {
+        document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
     }
-  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTheme(currentTheme);
+    updateActiveOption();
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+});
+
+document.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.theme-dropdown');
+    if (!dropdown.contains(event.target)) {
+        document.getElementById('themeMenu').classList.remove('show');
+    }
 });

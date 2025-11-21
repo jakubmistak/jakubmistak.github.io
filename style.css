@@ -362,7 +362,7 @@ body.research main {
 }
 
 .pub-label i {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .pub-label:hover {
@@ -390,7 +390,7 @@ body.research main {
 /* Details/summary for abstract toggle */
 
 .pub-abstract-details {
-    margin-top: 0.6rem;
+    margin-top: 0;
 }
 
 /* Hide the default triangle marker */

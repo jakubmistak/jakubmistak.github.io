@@ -306,7 +306,7 @@ body.research main {
 .section-underline {
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, var(--accent-primary), transparent);
+    background: linear-gradient(0deg, var(--accent-primary), transparent);
     margin: 0.35rem 0 1.2rem;
 }
 

@@ -1,0 +1,199 @@
+:root {
+  --bg-light: #f5f5f5;
+  --bg-dark: #151515;
+  --text-light: #111111;
+  --text-dark: #f0f0f0;
+  --accent: #007acc;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #1f1f1f;
+  --border-radius: 10px;
+}
+
+/* Base (light) */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* Dark theme */
+body.theme-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.theme-dark .card {
+  background-color: var(--card-bg-dark);
+  border-color: #333;
+}
+
+body.theme-dark a {
+  color: #66bfff;
+}
+
+/* Layout */
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.navbar-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.site-title {
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.95rem;
+  padding-bottom: 2px;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Theme toggle */
+
+.theme-toggle {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.theme-toggle button {
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 3px 6px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.theme-toggle button.active {
+  border-color: var(--accent);
+}
+
+/* Content */
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+/* Card */
+
+.card {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg-light);
+  border: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ccc;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.card-role {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Side sections (Contact / Links) */
+
+.card-side {
+  margin-top: 10px;
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card-side h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.card-side p,
+.card-side a {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 40px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+}

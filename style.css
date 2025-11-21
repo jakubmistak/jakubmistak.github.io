@@ -341,7 +341,8 @@ body.research main {
 .pub-links {
     margin-top: 0.6rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  /* wrapping is ok on narrow screens */
+    align-items: center;
     gap: 0.7rem;
     font-size: 0.9rem;
 }

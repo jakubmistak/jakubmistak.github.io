@@ -1,146 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Jakub Miśtak</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Jakub Miśtak</title>
 
-  <!-- Icon fonts (same as Andrea) -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <!-- Icon fonts (same as Andrea) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-  <!-- Your stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <!-- External stylesheet with Andrea-style CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="about">
-  <!-- Top black header bar (hidden on About by CSS) -->
-  <header>
-    <div class="container">
-      <h1>
-        <a href="index.html" target="_self"
-           style="color: inherit; text-decoration: none;">
-          Jakub Miśtak
-        </a>
-      </h1>
-    </div>
-  </header>
-
-  <!-- Dark grey nav bar -->
-  <nav>
-    <div class="container">
-      <ul>
-        <li><a href="index.html" class="active">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="policy-work.html">Policy Work</a></li>
-        <li><a href="cv.html">CV</a></li>
-      </ul>
-
-      <!-- Theme dropdown (gear icon) -->
-      <div class="theme-dropdown">
-        <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
-          <span id="themeIcon">⚙</span>
-        </button>
-        <div class="theme-menu" id="themeMenu">
-          <button onclick="setTheme('light')" class="theme-option">
-            <span>☀</span> Light
-          </button>
-          <button onclick="setTheme('dark')" class="theme-option">
-            <span>☽</span> Dark
-          </button>
-          <button onclick="setTheme('auto')" class="theme-option">
-            <span>⚙</span> Auto
-          </button>
+<body>
+    <!-- Top black bar (hidden by CSS on About page) -->
+    <header>
+        <div class="container">
+            <h1><a href="index.html" target="_self" style="color: inherit; text-decoration: none;">Jakub Miśtak</a></h1>
         </div>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <div class="container">
-      <div class="about-content">
-        <!-- TEXT (right side) -->
-        <div class="about-text">
-          <h1>Welcome to my research website</h1>
-          <p>
-            I am an Economist in the Directorate General Monetary Policy (DG-MP) at the
-            <a href="https://www.ecb.europa.eu/" target="_blank" rel="noopener noreferrer">
-              European Central Bank</a>. I previously completed the ECB Graduate Programme.
-          </p>
-          <p>
-            I hold a PhD in Economics from
-            <a href="https://www.kcl.ac.uk" target="_blank" rel="noopener noreferrer">
-              King’s College London</a>, with a focus on macro-finance and international economics. During my PhD
-            studies, I was a PhD Trainee in the Directorate General Research (DG-R) at the ECB.
-          </p>
-          <p>
-            Before completing my PhD, I was a full-time Stipendiary Fellow in Economics at the
-            University of Edinburgh School of Economics and held teaching assistant positions at
-            King’s College London and the University of York.
-          </p>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="policy-work.html">Policy Work</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+            <div class="theme-dropdown">
+                <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
+                    <span id="themeIcon">⚙</span>
+                </button>
+                <div class="theme-menu" id="themeMenu">
+                    <button onclick="setTheme('light')" class="theme-option">
+                        <span>☀</span> Light
+                    </button>
+                    <button onclick="setTheme('dark')" class="theme-option">
+                        <span>☽</span> Dark
+                    </button>
+                    <button onclick="setTheme('auto')" class="theme-option">
+                        <span>⚙</span> Auto
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <!-- PROFILE CARD (left side) -->
-        <div class="about-sidebar">
-          <div class="profile-panel">
-            <!-- Upload a file named profile.jpg to your repo root -->
-            <img src="profile.jpg" alt="Jakub Miśtak" class="profile-image">
-
-            <div class="profile-name">Jakub Miśtak</div>
-            <div class="profile-affiliation" style="font-size: 1.1rem; line-height: 2rem;">
-              Economist<br>
-              Directorate General Monetary Policy<br>
-              European Central Bank
+    </nav>
+    
+    <main>
+        <div class="container">
+            <div class="about-content">
+                <!-- RIGHT SIDE TEXT -->
+                <div class="about-text">
+                    <h1>Welcome to my research website</h1>
+                    <p>
+                        I am an Economist in the Directorate General Monetary Policy (DG-MP) at the 
+                        <a href="https://www.ecb.europa.eu/" target="_blank" rel="noopener noreferrer">European Central Bank</a>. 
+                        I previously completed the ECB Graduate Programme.
+                    </p>
+                    <p>
+                        I hold a PhD in Economics from 
+                        <a href="https://www.kcl.ac.uk" target="_blank" rel="noopener noreferrer">King’s College London</a>, 
+                        with a focus on macro-finance and international economics. During my PhD studies, 
+                        I was a PhD Trainee in the Directorate General Research (DG-R) at the ECB.
+                    </p>
+                    <p>
+                        Before completing my PhD, I was a full-time Stipendiary Fellow in Economics at the University 
+                        of Edinburgh School of Economics and held Teaching Assistant positions at King’s College London 
+                        and the University of York.
+                    </p>
+                </div>
+                
+                <!-- LEFT SIDE CARD -->
+                <div class="about-sidebar">
+                    <div class="profile-panel">
+                        <!-- Upload profile.jpg to your repo root -->
+                        <img src="profile.jpg" alt="Jakub Miśtak" class="profile-image">
+                        <div class="profile-name">Jakub Miśtak</div>
+                        <div class="profile-affiliation" style="font-size: 1.1rem; line-height: 2rem;">
+                            Economist<br />Directorate General Monetary Policy<br />European Central Bank
+                        </div>
+                        
+                        <div class="info-block">
+                            <h3>Contact</h3>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:jakub.mistak@ecb.europa.eu">jakub.mistak@ecb.europa.eu</a>
+                            </div>
+                            <!-- add address if you want, like Andrea -->
+                            <!--
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Frankfurt am Main, Germany</span>
+                            </div>
+                            -->
+                        </div>
+                        
+                        <div class="info-block">
+                            <h3>Links</h3>
+                            <div class="contact-item">
+                                <i class="ai ai-google-scholar" style="color: #4285f4; font-size: 2rem;"></i>
+                                <a href="https://scholar.google.com/citations?user=oFN2_XEAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="ai ai-ideas-repec" style="color: #6f42c1; font-size: 2rem;"></i>
+                                <a href="https://ideas.repec.org/f/pmi994.html" target="_blank">RePEc / IDEAS</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin" style="color: #0a66c2;"></i>
+                                <a href="https://www.linkedin.com/in/jakub-mistak/" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /.about-sidebar -->
             </div>
-
-            <div class="info-block">
-              <h3>Contact</h3>
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:jakub.mistak@ecb.europa.eu">
-                  jakub.mistak@ecb.europa.eu
-                </a>
-              </div>
-            </div>
-
-            <div class="info-block">
-              <h3>Links</h3>
-              <div class="contact-item">
-                <i class="ai ai-google-scholar" style="color:#4285f4; font-size:2rem;"></i>
-                <a href="https://scholar.google.com/citations?user=oFN2_XEAAAAJ&hl=en&oi=ao"
-                   target="_blank">
-                  Google Scholar
-                </a>
-              </div>
-              <div class="contact-item">
-                <i class="ai ai-ideas-repec" style="color:#6f42c1; font-size:2rem;"></i>
-                <a href="https://ideas.repec.org/f/pmi994.html" target="_blank">
-                  RePEc / IDEAS
-                </a>
-              </div>
-              <div class="contact-item">
-                <i class="fab fa-linkedin" style="color:#0a66c2;"></i>
-                <a href="https://www.linkedin.com/in/jakub-mistak/" target="_blank">
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-
-          </div>
         </div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p style="text-align: center;">
-        &copy; <span id="currentYear"></span> Jakub Miśtak. All rights reserved.
-      </p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p style="text-align: center;">&copy; <span id="currentYear"></span> Jakub Miśtak. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

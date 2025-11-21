@@ -274,43 +274,103 @@ footer {
 }
 footer p { color: white; margin: 0; }
 
-/* Research page layout */
-.research-content {
-    padding: 1.5rem 1rem 2rem;
+/* ===== Research page: section cards like Andrea's ===== */
+
+body.research main {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Publication list styling (similar feel to Andrea's cards) */
-.pub-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    margin-top: 0.5rem;
+.research-page {
+    padding: 1.75rem 0 2.5rem;
 }
 
-.pub-item {
-    padding: 1rem 1.25rem;
-    border-radius: 12px;
+.section-card {
+    background: var(--bg-secondary);
+    border-radius: 18px;
     border: 1px solid var(--border-color);
-    background: var(--bg-primary);
-    box-shadow: 0 4px 12px var(--shadow);
+    box-shadow: 0 4px 16px var(--shadow);
+    padding: 1.75rem 2rem;
+    margin: 0 auto 1.75rem auto;
+}
+
+.section-title {
+    font-weight: 300;
+    font-size: 1.9rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.section-underline {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), transparent);
+    margin: 0.35rem 0 1.2rem;
+}
+
+/* Publication block */
+
+.pub-entry {
+    margin-bottom: 0.5rem;
 }
 
 .pub-title {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.05rem;
+    margin-bottom: 0.15rem;
     color: var(--text-primary);
-    margin-bottom: 0.25rem;
 }
 
-.pub-authors,
-.pub-venue {
+.pub-authors {
     font-size: 0.95rem;
     color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 0.15rem;
+}
+
+.pub-venue {
+    font-size: 0.95rem;
+    color: var(--accent-primary);
+    font-weight: 500;
 }
 
 .pub-links {
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    font-size: 0.9rem;
+}
+
+.pub-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.23rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.pub-label i {
+    font-size: 0.9rem;
+}
+
+.pub-label:hover {
+    background: var(--accent-primary);
+    color: #ffffff;
+    border-color: var(--accent-primary);
+}
+
+.section-note {
     font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
 }
 
 @media (max-width: 1024px) {

@@ -273,6 +273,46 @@ footer {
     transition: background-color 0.3s ease;
 }
 footer p { color: white; margin: 0; }
+
+/* Research page layout */
+.research-content {
+    padding: 1.5rem 1rem 2rem;
+}
+
+/* Publication list styling (similar feel to Andrea's cards) */
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.pub-item {
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.pub-title {
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.pub-authors,
+.pub-venue {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.pub-links {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
 @media (max-width: 1024px) {
     .about-content {
         flex-direction: column;

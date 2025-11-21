@@ -1,62 +1,103 @@
 let currentTheme = localStorage.getItem('theme') || 'auto';
 
 function toggleDropdown() {
-    const menu = document.getElementById('themeMenu');
+  const menu = document.getElementById('themeMenu');
+  if (menu) {
     menu.classList.toggle('show');
+  }
 }
 
 function setTheme(theme) {
-    currentTheme = theme;
-    localStorage.setItem('theme', theme);
-    
-    if (theme === 'auto') {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    } else {
-        document.documentElement.setAttribute('data-theme', theme);
+  currentTheme = theme;
+  localStorage.setItem('theme', theme);
+
+  if (theme === 'auto') {
+    if (window.matchMedia) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
     }
-    
-    const icon = document.getElementById('themeIcon');
+  } else {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+
+  const icon = document.getElementById('themeIcon');
+  if (icon) {
     if (theme === 'dark') {
-        icon.textContent = '☽';
+      icon.textContent = '☽';
     } else if (theme === 'light') {
-        icon.textContent = '☀';
+      icon.textContent = '☀';
     } else {
-        icon.textContent = '⚙';
+      icon.textContent = '⚙';
     }
-    
-    updateActiveOption();
-    document.getElementById('themeMenu').classList.remove('show');
+  }
+
+  updateActiveOption();
+
+  const menu = document.getElementById('themeMenu');
+  if (menu) {
+    menu.classList.remove('show');
+  }
 }
 
 function updateActiveOption() {
-    const options = document.querySelectorAll('.theme-option');
-    options.forEach(option => {
-        option.classList.remove('active');
-        if (option.textContent.includes(
-            currentTheme === 'light' ? 'Light' :
-            currentTheme === 'dark' ? 'Dark' : 'Auto'
-        )) {
-            option.classList.add('active');
-        }
-    });
+  const options = document.querySelectorAll('.theme-option');
+  options.forEach(option => {
+    option.classList.remove('active');
+    const text = option.textContent || '';
+    if (
+      (currentTheme === 'light' && text.includes('Light')) ||
+      (currentTheme === 'dark' && text.includes('Dark')) ||
+      (currentTheme === 'auto' && text.includes('Auto'))
+    ) {
+      option.classList.add('active');
+    }
+  });
 }
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+// Listen for system theme changes when on "auto"
+if (window.matchMedia) {
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  const mqHandler = e => {
     if (currentTheme === 'auto') {
-        document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
     }
-});
+  };
+  if (mq.addEventListener) {
+    mq.addEventListener('change', mqHandler);
+  } else if (mq.addListener) {
+    mq.addListener(mqHandler);
+  }
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    setTheme(currentTheme);
-    updateActiveOption();
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-});
+document.addEventListener('DOMContentLoaded', () => {
+  // Theme setup
+  setTheme(currentTheme);
+  updateActiveOption();
 
-document.addEventListener('click', function(event) {
+  const yearSpan = document.getElementById('currentYear');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  // Close the theme dropdown when clicking outside
+  document.addEventListener('click', event => {
     const dropdown = document.querySelector('.theme-dropdown');
-    if (!dropdown.contains(event.target)) {
-        document.getElementById('themeMenu').classList.remove('show');
+    const menu = document.getElementById('themeMenu');
+    if (dropdown && menu && !dropdown.contains(event.target)) {
+      menu.classList.remove('show');
     }
+  });
+
+  // === Abstract toggles ===
+  const abstractButtons = document.querySelectorAll('.js-abstract-toggle');
+  abstractButtons.forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      const targetSelector = button.getAttribute('data-target');
+      if (!targetSelector) return;
+      const box = document.querySelector(targetSelector);
+      if (!box) return;
+      box.classList.toggle('show');
+    });
+  });
 });

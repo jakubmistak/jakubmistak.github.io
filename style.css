@@ -365,6 +365,12 @@ body.research main {
     font-size: 0.8rem;
 }
 
+/* Make sure both icons are the same visual size */
+.pub-label .fa-link,
+.pub-label .fa-file-alt {
+    font-size: 0.75rem;
+}
+
 .pub-label:hover {
     background: var(--accent-primary);
     color: #ffffff;

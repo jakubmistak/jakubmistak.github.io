@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Jakub Miśtak</title>
+
+    <!-- Icon fonts, same as About -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header is hidden by CSS if you used the global header {display:none} rule -->
+    <header>
+        <div class="container">
+            <h1><a href="index.html" target="_self" style="color: inherit; text-decoration: none;">Jakub Miśtak</a></h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="policy-work.html">Policy Work</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+            <div class="theme-dropdown">
+                <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
+                    <span id="themeIcon">⚙</span>
+                </button>
+                <div class="theme-menu" id="themeMenu">
+                    <button onclick="setTheme('light')" class="theme-option">
+                        <span>☀</span> Light
+                    </button>
+                    <button onclick="setTheme('dark')" class="theme-option">
+                        <span>☽</span> Dark
+                    </button>
+                    <button onclick="setTheme('auto')" class="theme-option">
+                        <span>⚙</span> Auto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="research-content">
+                <h1>Research</h1>
+
+                <p>
+                    My research interests lie at the intersection of macro-finance, monetary economics
+                    and international economics, with a particular focus on DSGE modelling and the role
+                    of networks in the transmission of shocks.
+                </p>
+
+                <h2>Publications</h2>
+
+                <div class="pub-list">
+                    <div class="pub-item">
+                        <div class="pub-title">
+                            Supply chain networks, trade and the Brexit deal: a general equilibrium analysis
+                        </div>
+                        <div class="pub-authors">
+                            with Aida Garcia-Lazaro and F. Gulcin Ozkan
+                        </div>
+                        <div class="pub-venue">
+                            <em>Journal of Economic Dynamics and Control</em>, Volume 133, 2021, Article 104254.
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1016/j.jedc.2021.104254" target="_blank" rel="noopener">
+                                Published version (ScienceDirect)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center;">
+                &copy; <span id="currentYear"></span> Jakub Miśtak. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 

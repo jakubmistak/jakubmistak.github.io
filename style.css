@@ -361,14 +361,21 @@ body.research main {
     font: inherit; /* so buttons & links look the same */
 }
 
+/* Base size for all icons in the pills */
 .pub-label i {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1;
 }
 
-/* Make sure both icons are the same visual size */
-.pub-label .fa-link,
+/* Abstract icon (file) */
 .pub-label .fa-file-alt {
     font-size: 0.75rem;
+}
+
+/* Journal version icon (link): make it slightly smaller so it looks the same size */
+.pub-label .fa-link {
+    font-size: 0.65rem;
+    transform: translateY(1px); /* tiny vertical adjust so it sits nicely */
 }
 
 .pub-label:hover {

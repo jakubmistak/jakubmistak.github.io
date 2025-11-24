@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Jakub Miśtak</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="cv">
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="policy-work.html">Policy Work</a></li>
+                <li><a href="cv.html" class="active">CV</a></li>
+            </ul>
+
+            <div class="theme-dropdown">
+                <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
+                    <span id="themeIcon">⚙</span>
+                </button>
+                <div class="theme-menu" id="themeMenu">
+                    <button onclick="setTheme('light')" class="theme-option"><span>☀</span> Light</button>
+                    <button onclick="setTheme('dark')" class="theme-option"><span>☽</span> Dark</button>
+                    <button onclick="setTheme('auto')" class="theme-option"><span>⚙</span> Auto</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="text-align:center; padding-top:1.5rem;">
+
+            <!-- DOWNLOAD BUTTON -->
+            <a href="cv.pdf"
+               download
+               class="pub-label"
+               style="font-size:1rem; margin-bottom:1.2rem; display:inline-flex; align-items:center;">
+                <i class="fas fa-download"></i>&nbsp; Download CV (PDF)
+            </a>
+
+            <!-- EMBEDDED CV VIEWER -->
+            <div style="
+                margin-top:1.5rem;
+                background: var(--bg-secondary);
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+                box-shadow: 0 4px 16px var(--shadow);
+                padding: 1rem;
+            ">
+                <embed src="cv.pdf"
+                       type="application/pdf"
+                       width="100%"
+                       height="900px"
+                       style="border-radius:8px;">
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Jakub Miśtak. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 

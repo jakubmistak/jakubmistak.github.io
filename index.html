@@ -19,37 +19,41 @@
         </div>
     </header>
     
-    <nav>
+<nav>
   <div class="container nav-inner">
-    <!-- Hamburger -->
+    <!-- Hamburger button (shown only on small screens) -->
     <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
     <ul>
-      <li><a href="index.html" class="ACTIVE_IF_ABOUT">About</a></li>
-      <li><a href="research.html" class="ACTIVE_IF_RESEARCH">Research</a></li>
-      <li><a href="policy-work.html" class="ACTIVE_IF_POLICY">Policy Work</a></li>
-      <li><a href="cv.html" class="ACTIVE_IF_CV">CV</a></li>
+      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="policy-work.html">Policy Work</a></li>
+      <li><a href="cv.html">CV</a></li>
     </ul>
-      <div class="theme-dropdown">
-                <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
-                    <span id="themeIcon">⚙</span>
-                </button>
-                <div class="theme-menu" id="themeMenu">
-                    <button onclick="setTheme('light')" class="theme-option">
-                        <span>☀</span> Light
-                    </button>
-                    <button onclick="setTheme('dark')" class="theme-option">
-                        <span>☽</span> Dark
-                    </button>
-                    <button onclick="setTheme('auto')" class="theme-option">
-                        <span>⚙</span> Auto
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+
+    <div class="theme-dropdown">
+      <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
+        <span id="themeIcon">⚙</span>
+      </button>
+      <div class="theme-menu" id="themeMenu">
+        <button onclick="setTheme('light')" class="theme-option">
+          <span>☀</span> Light
+        </button>
+        <button onclick="setTheme('dark')" class="theme-option">
+          <span>☽</span> Dark
+        </button>
+        <button onclick="setTheme('auto')" class="theme-option">
+          <span>⚙</span> Auto
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
     
     <main>
         <div class="container">

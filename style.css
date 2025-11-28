@@ -510,10 +510,18 @@ body.research main {
     margin: 0.25rem 0;
   }
 
-  nav a:hover {
+  /* ✅ Remove blue background in the hamburger menu */
+  nav .nav-links a,
+  nav .nav-links a:hover,
+  nav .nav-links a:active,
+  nav .nav-links a.active {
     background-color: transparent;
   }
 
+  /* ✅ Remove tap highlight glow on mobile safari/chrome */
+  nav .nav-links a {
+    -webkit-tap-highlight-color: transparent;
+  }
 
   /* Keep the gear icon on the right on mobile */
   .theme-dropdown {
@@ -523,6 +531,7 @@ body.research main {
     transform: translateY(-50%);
   }
 }
+
 
 
 /* Hide the top black bar (header) only on About page */

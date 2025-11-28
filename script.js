@@ -70,7 +70,7 @@ if (window.matchMedia) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // === Theme setup ===
+  // Theme setup
   setTheme(currentTheme);
   updateActiveOption();
 
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // === Close theme dropdown when clicking outside ===
+  // Close the theme dropdown when clicking outside
   document.addEventListener('click', event => {
     const dropdown = document.querySelector('.theme-dropdown');
     const menu = document.getElementById('themeMenu');
@@ -89,33 +89,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // === Mobile nav hamburger toggle ===
-  const nav = document.getElementById('mainNav') || document.querySelector('nav');
+  const nav = document.getElementById('mainNav');      // <nav id="mainNav">
   const navToggle = document.querySelector('.nav-toggle');
 
   if (nav && navToggle) {
-    // Open/close menu on hamburger click
-    navToggle.addEventListener('click', event => {
+    // Open/close on hamburger click
+    navToggle.addEventListener('click', (event) => {
       event.stopPropagation();
       nav.classList.toggle('nav-open');
     });
 
-    // Close menu when clicking any nav link
-    const navLinks = nav.querySelectorAll('a');
-    navLinks.forEach(link => {
+    // Close menu when clicking a nav link
+    nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('nav-open');
       });
     });
 
-    // Close menu when clicking outside nav
-    document.addEventListener('click', event => {
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
       if (!nav.contains(event.target)) {
         nav.classList.remove('nav-open');
       }
     });
   }
 
-  // === Abstract toggles on Research page ===
+  // === Abstract toggles ===
   const abstractButtons = document.querySelectorAll('.js-abstract-toggle');
   abstractButtons.forEach(button => {
     button.addEventListener('click', event => {

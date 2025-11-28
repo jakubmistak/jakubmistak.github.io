@@ -88,6 +88,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+    // === Mobile nav hamburger toggle ===
+  const nav = document.getElementById('mainNav');
+  const navToggle = document.querySelector('.nav-toggle');
+
+  if (nav && navToggle) {
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();               // don't trigger outside click
+      nav.classList.toggle('nav-open');  // CSS will show/hide dropdown
+    });
+
+    // Close nav when clicking anywhere else
+    document.addEventListener('click', (event) => {
+      if (!nav.contains(event.target)) {
+        nav.classList.remove('nav-open');
+      }
+    });
+  }
+
   // === Abstract toggles ===
   const abstractButtons = document.querySelectorAll('.js-abstract-toggle');
   abstractButtons.forEach(button => {

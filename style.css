@@ -466,29 +466,42 @@ body.research main {
     margin-bottom: 0.75rem;
   }
 
-  /* Nav on mobile */
+  /* --- NAV: hamburger menu --- */
+
+  nav {
+    position: relative; /* for absolute dropdown positioning */
+  }
 
   .nav-inner {
     justify-content: flex-start;
   }
 
+  /* Show hamburger button on mobile */
   .nav-toggle {
-    display: block;         /* show hamburger */
+    display: block;
   }
 
-  nav ul {
-    display: none;          /* hide menu by default */
+  /* Base nav links (dropdown) – hidden by default */
+  nav .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;              /* DROP BELOW the grey bar */
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
-    margin-top: 0.5rem;
+    padding: 0.5rem 1rem 0.75rem;
+    margin: 0;
+    z-index: 999;
   }
 
-  nav.nav-open ul {
-    display: flex;          /* show when nav has nav-open class */
+  /* When nav is open, show the dropdown */
+  nav.nav-open .nav-links {
+    display: flex;
   }
 
-  nav ul li {
+  nav .nav-links li {
     margin: 0.25rem 0;
   }
 
@@ -500,6 +513,7 @@ body.research main {
     transform: translateY(-50%);
   }
 }
+
 
 /* Hide the top black bar (header) only on About page */
 header { display: none !important; }

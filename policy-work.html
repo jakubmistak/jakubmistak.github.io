@@ -23,22 +23,22 @@
     </header>
     
 
- <nav>
+<nav id="mainNav">
   <div class="container nav-inner">
-    <!-- Hamburger button (shown only on small screens) -->
+    <!-- Hamburger button (shown only on mobile) -->
     <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
 
-    <ul>
-      <li><a href="index.html" class="active">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="policy-work.html">Policy Work</a></li>
-      <li><a href="cv.html">CV</a></li>
+    <!-- Navigation links -->
+    <ul class="nav-links">
+      <li><a href="index.html" class="ACTIVE-IF-THIS-PAGE">About</a></li>
+      <li><a href="research.html" class="ACTIVE-IF-THIS-PAGE">Research</a></li>
+      <li><a href="policy-work.html" class="ACTIVE-IF-THIS-PAGE">Policy Work</a></li>
+      <li><a href="cv.html" class="ACTIVE-IF-THIS-PAGE">CV</a></li>
     </ul>
 
+    <!-- Theme dropdown (gear icon) -->
     <div class="theme-dropdown">
       <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
         <span id="themeIcon">⚙</span>

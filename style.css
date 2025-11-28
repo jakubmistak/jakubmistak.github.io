@@ -449,24 +449,35 @@ body.research main {
     }
 }
 @media (max-width: 768px) {
-    body {
-        font-size: 16.5px;
-    }
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.5rem; }
-    .profile-panel {
-        padding: 1rem;
-    }
-    .profile-image {
-        width: 240px;
-        height: 240px;
-        margin-bottom: 0.75rem;
-     .nav-toggle {
-    display: block;
+  body {
+    font-size: 16.5px;
+  }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+
+  .profile-panel {
+    padding: 1rem;
+  }
+
+  .profile-image {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Nav on mobile */
+
+  .nav-inner {
+    justify-content: flex-start;
+  }
+
+  .nav-toggle {
+    display: block;         /* show hamburger */
   }
 
   nav ul {
-    display: none;
+    display: none;          /* hide menu by default */
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -474,7 +485,7 @@ body.research main {
   }
 
   nav.nav-open ul {
-    display: flex;
+    display: flex;          /* show when nav has nav-open class */
   }
 
   nav ul li {
@@ -488,7 +499,6 @@ body.research main {
     right: 10px;
     transform: translateY(-50%);
   }
-}
 }
 
 /* Hide the top black bar (header) only on About page */

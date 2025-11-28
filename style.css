@@ -81,7 +81,12 @@ nav a {
     border-radius: 4px;
     transition: background-color 0.3s;
 }
-nav a:hover, nav a.active {
+/* Desktop/default */
+nav a:hover {
+    background-color: var(--accent-primary);
+}
+
+nav a.active {
     background-color: var(--accent-primary);
 }
 
@@ -504,6 +509,11 @@ body.research main {
   nav .nav-links li {
     margin: 0.25rem 0;
   }
+
+  nav a:hover {
+    background-color: transparent;
+  }
+
 
   /* Keep the gear icon on the right on mobile */
   .theme-dropdown {

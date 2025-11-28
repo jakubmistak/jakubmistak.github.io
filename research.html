@@ -24,14 +24,19 @@
     </header>
 
     <nav>
-        <div class="container">
-            <ul>
-                <li><a href="index.html">About</a></li>
-                <li><a href="research.html" class="active">Research</a></li>
-                <li><a href="policy-work.html">Policy Work</a></li>
-                <li><a href="cv.html">CV</a></li>
-            </ul>
+  <div class="container nav-inner">
+    <!-- Hamburger -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
 
+    <ul>
+      <li><a href="index.html" class="ACTIVE_IF_ABOUT">About</a></li>
+      <li><a href="research.html" class="ACTIVE_IF_RESEARCH">Research</a></li>
+      <li><a href="policy-work.html" class="ACTIVE_IF_POLICY">Policy Work</a></li>
+      <li><a href="cv.html" class="ACTIVE_IF_CV">CV</a></li>
+    </ul>
+      
             <div class="theme-dropdown">
                 <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
                     <span id="themeIcon">⚙</span>

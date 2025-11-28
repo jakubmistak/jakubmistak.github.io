@@ -22,45 +22,48 @@
         </div>
     </header>
     
-    <nav id="mainNav">
-      <div class="container nav-inner">
-        <!-- Hamburger button (shown only on mobile) -->
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
+
+<nav id="mainNav">
+  <div class="container nav-inner">
+    <!-- Hamburger button (shown only on mobile) -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Navigation links -->
+    <ul class="nav-links">
+    <li><a href="index.html">About</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="policy-work.html" class="active">Policy Work</a></li>
+    <li><a href="cv.html">CV</a></li>
+    </ul>
+
+    <!-- Theme dropdown (gear icon) -->
+    <div class="theme-dropdown">
+      <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
+        <span id="themeIcon">⚙</span>
+      </button>
+      <div class="theme-menu" id="themeMenu">
+        <button onclick="setTheme('light')" class="theme-option">
+          <span>☀</span> Light
         </button>
-
-        <!-- Navigation links -->
-        <ul class="nav-links">
-          <li><a href="index.html">About</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="policy-work.html" class="active">Policy Work</a></li>
-          <li><a href="cv.html">CV</a></li>
-        </ul>
-
-        <!-- Theme dropdown (gear icon) -->
-        <div class="theme-dropdown">
-          <button class="theme-toggle" onclick="toggleDropdown()" id="themeToggle">
-            <span id="themeIcon">⚙</span>
-          </button>
-          <div class="theme-menu" id="themeMenu">
-            <button onclick="setTheme('light')" class="theme-option">
-              <span>☀</span> Light
-            </button>
-            <button onclick="setTheme('dark')" class="theme-option">
-              <span>☽</span> Dark
-            </button>
-            <button onclick="setTheme('auto')" class="theme-option">
-              <span>⚙</span> Auto
-            </button>
-          </div>
-        </div>
+        <button onclick="setTheme('dark')" class="theme-option">
+          <span>☽</span> Dark
+        </button>
+        <button onclick="setTheme('auto')" class="theme-option">
+          <span>⚙</span> Auto
+        </button>
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
+
 
     <main>
         <div class="container research-page">
-            <!-- ECB / Central bank work -->
+            <!-- POLICY WORK CARD -->
             <section class="section-card">
+                <h1 class="section-title"></h1>
 
                 <article class="pub-entry">
                     <div class="pub-title">
@@ -84,10 +87,11 @@
                 </article>
             </section>
 
-            <!-- Other policy briefs -->
+                        <!-- POLICY WORK CARD -->
             <section class="section-card">
-
-                <article class="pub-entry">
+                <h1 class="section-title"></h1>
+                
+                                <article class="pub-entry">
                     <div class="pub-title">
                         Asymmetric Monetary Policy Spillovers: The Role of Supply Chains, Credit Networks and Fear of Floating
                     </div>
@@ -107,10 +111,10 @@
                         </a>
                     </div>
                 </article>
+
             </section>
         </div>
     </main>
-
     <footer>
         <div class="container">
             <p style="text-align: center;">

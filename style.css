@@ -84,6 +84,34 @@ nav a {
 nav a:hover, nav a.active {
     background-color: var(--accent-primary);
 }
+
+/* Wrap nav content */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Hamburger button: hidden on desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  margin-right: 1rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: white;
+  margin: 3px 0;
+  border-radius: 1px;
+}
+
 main {
     background: var(--bg-secondary);
     padding: 0.25rem;
@@ -433,8 +461,36 @@ body.research main {
         width: 240px;
         height: 240px;
         margin-bottom: 0.75rem;
-    }
+     .nav-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  nav.nav-open ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.25rem 0;
+  }
+
+  /* Keep the gear icon on the right on mobile */
+  .theme-dropdown {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
 }
+}
+
 /* Hide the top black bar (header) only on About page */
 header { display: none !important; }
 

@@ -94,8 +94,23 @@ nav a.active {
 .nav-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
+}
+
+/* Name on the left in the grey bar */
+.site-name {
+  font-weight: 700;          /* bold */
+  font-size: 1.05rem;
+  margin-right: 1.5rem;      /* space before the nav links */
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.site-name a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Hamburger button: hidden on desktop */

@@ -492,6 +492,7 @@ body.research main {
 
   .nav-inner {
     justify-content: flex-start;
+    gap: 0.25rem;  
   }
     
   /* Show hamburger button on mobile */

@@ -503,7 +503,7 @@ body.research main {
 
         .site-name {
     position: static;        /* cancel absolute positioning */
-    margin-left: 0.75rem;
+    margin-left: 0.5rem;
     font-weight: 500;
   }
 

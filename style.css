@@ -92,20 +92,18 @@ nav a.active {
 
 /* Wrap nav content */
 .nav-inner {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
+  justify-content: center; /* center the buttons */
 }
 
-/* Name on the left in the grey bar */
 .site-name {
-  font-weight: 700;          /* bold */
+  position: absolute;
+  left: 0;
+  font-weight: 700;       /* bold */
   font-size: 1.05rem;
-  margin-right: 1.5rem;      /* space before the nav links */
   color: white;
-  display: flex;
-  align-items: center;
 }
 
 .site-name a {

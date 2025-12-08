@@ -101,8 +101,8 @@ nav a.active {
 .site-name {
   position: absolute;
   left: 0;
-  font-weight: 700;       /* bold */
-  font-size: 1.05rem;
+  font-weight: 500;       /* bold */
+  font-size: 1.1rem;
   color: white;
 }
 

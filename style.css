@@ -494,9 +494,16 @@ body.research main {
     justify-content: flex-start;
   }
 
+    .site-name {
+    position: static;        /* cancel absolute positioning */
+    margin-left: 0.75rem;
+    font-weight: 700;
+  }
+
   /* Show hamburger button on mobile */
   .nav-toggle {
     display: block;
+    margin-right: 0.25rem;
   }
 
   /* Base nav links (dropdown) – hidden by default */

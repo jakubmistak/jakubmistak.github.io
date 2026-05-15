@@ -358,8 +358,8 @@ body.research main {
 
 /* Publication block */
 
-.pub-entry {
-    margin-bottom: 1.0rem;
+.pub-entry + .pub-entry {
+    margin-top: 1.5rem;
 }
 
 .pub-title {

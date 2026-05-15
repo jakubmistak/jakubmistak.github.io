@@ -359,7 +359,7 @@ body.research main {
 /* Publication block */
 
 .pub-entry + .pub-entry {
-    margin-top: 1.5rem;
+    margin-top: 2.75rem;
 }
 
 .pub-title {
